@@ -92,6 +92,7 @@ public class SignatureUtil {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.ENCRYPT_MODE, publicKey);
         byte[] bytes = cipher.doFinal(toEncode.getBytes(StandardCharsets.UTF_8));
-        return new String(Base64.getEncoder().encode(bytes));
+        byte[] encoded = Base64.getEncoder().encode(bytes);
+        return new String(encoded);
     }
 }

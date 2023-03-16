@@ -5,44 +5,9 @@
     <artifactId>AuthLib</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    <properties>
-        <compiler-plugin.version>3.8.1</compiler-plugin.version>
-        <maven.compiler.release>17</maven.compiler.release>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
-    <distributionManagement>
-        <repository>
-            <id>archiva.gestoraRelease</id>
-            <name>Gestora Release Repository </name>
-            <url>http://192.168.6.73/archiva/repository/gestoraRelease/</url>
-        </repository>
-        <snapshotRepository>
-            <id>archiva.gestoraSnapshots</id>
-            <name>Gestora Snapshots Repository</name>
-            <url>http://192.168.6.73/archiva/repository/gestoraSnapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
-        </dependency>
-    </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${compiler-plugin.version}</version>
-                <configuration>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <parent>
+        <groupId>domolin</groupId>
+        <artifactId>ProjectTemplate</artifactId>
+        <version>1.0.0</version>
+    </parent>
 </project>

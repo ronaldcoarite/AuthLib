@@ -14,7 +14,7 @@ public class AccessEnconder implements EncryptorEncoder<PayloadAuth>{
         String text = String.format(
                 "%s#%s", 
                 payloadAut.getUserId(),
-                String.join(",",payloadAut.getRols()));
+                payloadAut.getRols()==null?"":String.join(",",payloadAut.getRols()));
         return text;
     }
 
