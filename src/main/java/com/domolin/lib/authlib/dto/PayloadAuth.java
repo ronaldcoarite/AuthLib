@@ -13,5 +13,6 @@ import lombok.ToString;
 @ToString
 public class PayloadAuth {
     private String[] rols;
-    private String userId;
+    private String userName;
+    private String installationId;
 }

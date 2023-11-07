@@ -72,7 +72,7 @@ public class Auth<T> {
         auth.loadPrimaryKey("D:\\proyects\\iot_server\\IotSecurity\\claves\\private2.pem");
         auth.loadPublicKey("D:\\proyects\\iot_server\\IotSecurity\\claves\\public.pem");
         PayloadAuth payloadAuth = new PayloadAuth();
-        payloadAuth.setUserId("21345678");
+        payloadAuth.setUserName("21345678");
         payloadAuth.setRols(new String[]{"ROL_A1","ROL_2"});
         
         AccessEnconder accessEnconder = new AccessEnconder();

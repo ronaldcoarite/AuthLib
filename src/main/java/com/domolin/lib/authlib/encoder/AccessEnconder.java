@@ -13,7 +13,7 @@ public class AccessEnconder implements EncryptorEncoder<PayloadAuth>{
     public String getTextToEncrypt(PayloadAuth payloadAut) {
         String text = String.format(
                 "%s#%s", 
-                payloadAut.getUserId(),
+                payloadAut.getUserName(),
                 payloadAut.getRols()==null?"":String.join(",",payloadAut.getRols()));
         return text;
     }
@@ -22,7 +22,7 @@ public class AccessEnconder implements EncryptorEncoder<PayloadAuth>{
     public PayloadAuth parse(String textDecrypted) {
         String txts[] = textDecrypted.split("#", 2);
         PayloadAuth payloadAuth = new PayloadAuth();
-        payloadAuth.setUserId(txts[0]);
+        payloadAuth.setUserName(txts[0]);
         payloadAuth.setRols(txts[1].split(","));
         return payloadAuth;
     }
